@@ -1,5 +1,5 @@
 const app = require('../../app');
-
+// Mock call that always will resolve to specific test URL
 test('A pre-signed URL', async () => {
   app.s3Handler.getSignedUrlPromise = jest.fn(() => Promise.resolve("https://test.com"));
   const event = {
